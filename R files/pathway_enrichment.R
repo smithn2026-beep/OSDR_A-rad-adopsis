@@ -1,0 +1,181 @@
+# =============================================================
+# Pathway / GO enrichment analysis -- REUSABLE VERSION
+# Run this AFTER multifactor_analysis.R (uses its DEG_*.csv outputs)
+#
+# This version wraps everything in one function so you can run the same
+# analysis on any of the DEG_*.csv files from 5a-5d without manually
+# editing filenames each time.
+# =============================================================
+
+# ---- 1. Install/load packages ---------------------------------------------
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+pkgs <- c("clusterProfiler", "org.At.tair.db", "enrichplot", "ggplot2")
+for (p in pkgs) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    BiocManager::install(p, update = FALSE, ask = FALSE)
+  }
+}
+
+library(clusterProfiler)
+library(org.At.tair.db)
+library(enrichplot)
+library(ggplot2)
+
+# ---- 2. The reusable function ----------------------------------------------
+# Arguments:
+#   deg_csv_path : path to a DEG_*.csv file produced by multifactor_analysis.R
+#   label        : short name used for output filenames (e.g. "OSD498_510")
+#   padj_cutoff  : significance threshold (default 0.05)
+#   lfc_cutoff   : optional minimum |log2FoldChange| to require (default 0 = off)
+#
+# Returns a list with the up/down gene lists and both enrichGO result objects,
+# in case you want to inspect them further interactively after the call.
+run_pathway_enrichment <- function(deg_csv_path,
+                                    label,
+                                    padj_cutoff = 0.05,
+                                    lfc_cutoff  = 0) {
+
+  cat("\n=========================================\n")
+  cat("Running enrichment for:", label, "\n")
+  cat("Input file:", deg_csv_path, "\n")
+  cat("=========================================\n")
+
+  # --- Load and validate the DEG table ---
+  res_df <- read.csv(deg_csv_path, row.names = 1)
+
+  required_cols <- c("log2FoldChange", "padj")
+  missing_cols <- setdiff(required_cols, colnames(res_df))
+  if (length(missing_cols) > 0) {
+    stop("Input file is missing expected column(s): ", paste(missing_cols, collapse = ", "),
+         " -- is this really a DESeq2 results CSV?")
+  }
+
+  # --- Universe = every gene DESeq2 actually tested, not the whole genome ---
+  universe <- rownames(res_df)
+  cat("Universe size (genes tested):", length(universe), "\n")
+
+  # --- Pull significant gene lists ---
+  sig_up <- rownames(subset(res_df,
+                             padj < padj_cutoff &
+                             log2FoldChange > lfc_cutoff))
+  sig_down <- rownames(subset(res_df,
+                               padj < padj_cutoff &
+                               log2FoldChange < -lfc_cutoff))
+
+  cat("Upregulated genes (padj <", padj_cutoff,
+      if (lfc_cutoff > 0) paste0(", |log2FC| > ", lfc_cutoff) else "", "):",
+      length(sig_up), "\n")
+  cat("Downregulated genes:", length(sig_down), "\n")
+
+  if (length(sig_up) == 0 && length(sig_down) == 0) {
+    cat("No significant genes found at this threshold -- skipping enrichment.\n")
+    return(invisible(list(label = label, sig_up = sig_up, sig_down = sig_down,
+                           ego_up = NULL, ego_down = NULL)))
+  }
+
+  # --- Sanity check: do gene IDs map to the annotation database at all? ---
+  check_ids <- head(c(sig_up, sig_down), 20)
+  if (length(check_ids) > 0) {
+    mapped_check <- suppressWarnings(
+      AnnotationDbi::select(org.At.tair.db, keys = check_ids,
+                             columns = "GO", keytype = "TAIR")
+    )
+    n_mapped <- length(unique(mapped_check$TAIR))
+    cat("ID mapping sanity check:", n_mapped, "of", length(check_ids),
+        "sampled genes mapped to at least one GO term\n")
+    if (n_mapped == 0) {
+      warning("ZERO genes mapped to the annotation database. Check that your ",
+               "gene IDs are in TAIR locus format (e.g. AT1G01010) -- enrichment ",
+               "results below will likely be empty.")
+    }
+  }
+
+  # --- Run GO enrichment (Biological Process) for each direction ---
+  ego_up <- if (length(sig_up) > 0) {
+    enrichGO(gene = sig_up, universe = universe, OrgDb = org.At.tair.db,
+              keyType = "TAIR", ont = "BP", pAdjustMethod = "BH",
+              pvalueCutoff = 0.05, qvalueCutoff = 0.2)
+  } else NULL
+
+  ego_down <- if (length(sig_down) > 0) {
+    enrichGO(gene = sig_down, universe = universe, OrgDb = org.At.tair.db,
+              keyType = "TAIR", ont = "BP", pAdjustMethod = "BH",
+              pvalueCutoff = 0.05, qvalueCutoff = 0.2)
+  } else NULL
+
+  # --- Save CSV outputs (skip cleanly if a direction had no significant genes) ---
+  if (!is.null(ego_up) && nrow(as.data.frame(ego_up)) > 0) {
+    out_csv <- paste0("GO_enrichment_", label, "_upregulated.csv")
+    write.csv(as.data.frame(ego_up), out_csv, row.names = FALSE)
+    cat("Saved:", out_csv, "(", nrow(as.data.frame(ego_up)), "enriched terms )\n")
+
+    p_up <- dotplot(ego_up, showCategory = 15) +
+      ggtitle(paste0(label, " -- UPregulated"))
+    ggsave(paste0("GO_dotplot_", label, "_upregulated.png"), p_up, width = 9, height = 7)
+  } else {
+    cat("No enriched terms found for upregulated genes (or no genes to test).\n")
+  }
+
+  if (!is.null(ego_down) && nrow(as.data.frame(ego_down)) > 0) {
+    out_csv <- paste0("GO_enrichment_", label, "_downregulated.csv")
+    write.csv(as.data.frame(ego_down), out_csv, row.names = FALSE)
+    cat("Saved:", out_csv, "(", nrow(as.data.frame(ego_down)), "enriched terms )\n")
+
+    p_down <- dotplot(ego_down, showCategory = 15) +
+      ggtitle(paste0(label, " -- DOWNregulated"))
+    ggsave(paste0("GO_dotplot_", label, "_downregulated.png"), p_down, width = 9, height = 7)
+  } else {
+    cat("No enriched terms found for downregulated genes (or no genes to test).\n")
+  }
+
+  invisible(list(label = label, sig_up = sig_up, sig_down = sig_down,
+                 ego_up = ego_up, ego_down = ego_down))
+}
+
+# ---- 3. Run it on each comparison -------------------------------------------
+# Uncomment / add lines as each DEG_*.csv becomes available.
+# The "label" argument controls output filenames -- keep them short and distinct.
+
+results_5a <- run_pathway_enrichment(
+  deg_csv_path = "DEG_OSD498_510_radiation_effect.csv",
+  label        = "OSD498_510_radiation"
+)
+
+# results_5b <- run_pathway_enrichment(
+#   deg_csv_path = "DEG_OSD508_510_genotype_x_radiation_interaction.csv",
+#   label        = "OSD508_510_interaction"
+# )
+
+# results_5c_low <- run_pathway_enrichment(
+#   deg_csv_path = "DEG_OSD782_10cGy_vs_none.csv",
+#   label        = "OSD782_10cGy"
+# )
+
+# results_5c_high <- run_pathway_enrichment(
+#   deg_csv_path = "DEG_OSD782_100cGy_vs_none.csv",
+#   label        = "OSD782_100cGy"
+# )
+
+# results_5d_40 <- run_pathway_enrichment(
+#   deg_csv_path = "DEG_OSD658_GCR40_vs_none.csv",
+#   label        = "OSD658_GCR40"
+# )
+
+# results_5d_80 <- run_pathway_enrichment(
+#   deg_csv_path = "DEG_OSD658_GCR80_vs_none.csv",
+#   label        = "OSD658_GCR80"
+# )
+
+# ---- 4. How to read the output table ---------------------------------------
+# Columns in each saved CSV:
+#   Description : the biological process name (e.g. "DNA repair")
+#   GeneRatio   : (genes from your list in this term) / (total genes in your list)
+#   BgRatio     : (genes in this term overall) / (total genes in universe)
+#   pvalue/p.adjust/qvalue : statistical significance -- filter on p.adjust
+#   geneID      : which of YOUR genes are driving this enrichment
+#   Count       : how many of your genes are in this term
+#
+# A term is meaningful enrichment (not just a large/common category) when
+# GeneRatio is notably higher than BgRatio AND p.adjust < 0.05.
