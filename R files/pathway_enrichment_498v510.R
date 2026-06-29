@@ -32,7 +32,7 @@ library(ggplot2)
 #
 # Returns a list with the up/down gene lists and both enrichGO result objects,
 # in case you want to inspect them further interactively after the call.
-run_pathway_enrichment <- function(deg_csv_path,
+run_pathway_enrichment <- function(deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD498_510_radiation_effect.csv",
                                     label,
                                     padj_cutoff = 0.05,
                                     lfc_cutoff  = 0) {
@@ -137,7 +137,7 @@ run_pathway_enrichment <- function(deg_csv_path,
 # ---- 3. Run it on each comparison -------------------------------------------
 # Uncomment / add lines as each DEG_*.csv becomes available.
 # The "label" argument controls output filenames -- keep them short and distinct.
-
+setwd("C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/pathway enrichment csv")
 results_5a <- run_pathway_enrichment(
   deg_csv_path = "DEG_OSD498_510_radiation_effect.csv",
   label        = "OSD498_510_radiation"
