@@ -137,9 +137,9 @@ run_pathway_enrichment <- function(deg_csv_path = "C:/Users/smith/OneDrive - Flo
 # ---- 3. Run it on each comparison -------------------------------------------
 # Uncomment / add lines as each DEG_*.csv becomes available.
 # The "label" argument controls output filenames -- keep them short and distinct.
-setwd("C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/pathway enrichment csv")
+setwd("C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/pathway enrichment csv/498_510")
 results_5a <- run_pathway_enrichment(
-  deg_csv_path = "DEG_OSD498_510_radiation_effect.csv",
+  deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD498_510_radiation_effect.csv",
   label        = "OSD498_510_radiation"
 )
 
