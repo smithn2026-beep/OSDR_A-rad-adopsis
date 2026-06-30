@@ -32,12 +32,12 @@ library(ggplot2)
 #
 # Returns a list with the up/down gene lists and both enrichGO result objects,
 # in case you want to inspect them further interactively after the call.
-run_pathway_enrichment <- function(deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD498_510_radiation_effect.csv",
+run_pathway_enrichment <- function(deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD658_GCR80_vs_none.csv",
                                     label,
                                     padj_cutoff = 0.05,
                                     lfc_cutoff  = 0) {
 
-  cat("\n=========================================\n")
+  cat("\n=========================================/n")
   cat("Running enrichment for:", label, "\n")
   cat("Input file:", deg_csv_path, "\n")
   cat("=========================================\n")
@@ -137,36 +137,31 @@ run_pathway_enrichment <- function(deg_csv_path = "C:/Users/smith/OneDrive - Flo
 # ---- 3. Run it on each comparison -------------------------------------------
 # Uncomment / add lines as each DEG_*.csv becomes available.
 # The "label" argument controls output filenames -- keep them short and distinct.
-setwd("C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/pathway enrichment csv/498_510")
-results_5a <- run_pathway_enrichment(
-  deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD498_510_radiation_effect.csv",
-  label        = "OSD498_510_radiation"
-)
+setwd("C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/pathway enrichment csv/658_GCR80")
 
-# results_5b <- run_pathway_enrichment(
-#   deg_csv_path = "DEG_OSD508_510_genotype_x_radiation_interaction.csv",
-#   label        = "OSD508_510_interaction"
-# )
+#results_5a <- run_pathway_enrichment(
+ # deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD498_510_radiation_effect.csv",
+  #label        = "OSD498_510_radiation")
 
-# results_5c_low <- run_pathway_enrichment(
-#   deg_csv_path = "DEG_OSD782_10cGy_vs_none.csv",
-#   label        = "OSD782_10cGy"
-# )
+#results_5b <- run_pathway_enrichment(
+#  deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD508_510_genotype_x_radiation_interaction.csv",
+ # label        = "OSD508_510_interaction")
 
-# results_5c_high <- run_pathway_enrichment(
-#   deg_csv_path = "DEG_OSD782_100cGy_vs_none.csv",
-#   label        = "OSD782_100cGy"
-# )
+#results_5c_low <- run_pathway_enrichment(
+ # deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD782_10cGy_vs_none.csv",
+  #label        = "OSD782_10cGy")
 
-# results_5d_40 <- run_pathway_enrichment(
-#   deg_csv_path = "DEG_OSD658_GCR40_vs_none.csv",
-#   label        = "OSD658_GCR40"
-# )
+#results_5c_high <- run_pathway_enrichment(
+ #  deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD782_100cGy_vs_none.csv",
+  # label        = "OSD782_100cGy")
 
-# results_5d_80 <- run_pathway_enrichment(
-#   deg_csv_path = "DEG_OSD658_GCR80_vs_none.csv",
-#   label        = "OSD658_GCR80"
-# )
+#results_5d_40 <- run_pathway_enrichment(
+  # deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD658_GCR40_vs_none.csv",
+   #label        = "OSD658_GCR40")
+
+results_5d_80 <- run_pathway_enrichment(
+   deg_csv_path = "C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/csv Results/DEG_OSD658_GCR80_vs_none.csv",
+   label        = "OSD658_GCR80")
 
 # ---- 4. How to read the output table ---------------------------------------
 # Columns in each saved CSV:
