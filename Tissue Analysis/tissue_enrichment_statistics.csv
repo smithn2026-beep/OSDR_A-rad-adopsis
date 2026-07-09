@@ -1,4 +1,4 @@
-"Organ","DEGs_in_organ","Total_genes_in_organ","DEG_rate_organ","DEG_rate_rest","Odds_ratio","P_value","Direction","P_adj_bonferroni","Significant"
+"organ","deg_in_organ","total_in_organ","deg_rate_organ","deg_rate_rest","odds_ratio","p_value","direction","padj","significant"
 "Flower",1192,3777,0.3156,0.367,0.795,1.04551595322022e-07,"depleted",5.2275797661011e-07,"YES"
 "Leaf_Shoot",1399,3288,0.4255,0.3143,1.616,2.70894662105754e-28,"enriched",1.35447331052877e-27,"YES"
 "Root",432,1195,0.3615,0.3471,1.065,0.333799086547004,"enriched",1,"no"
