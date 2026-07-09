@@ -1,0 +1,61 @@
+
+=== Normalized vs Unnormalized Gene List Comparison ===
+Jaccard > 0.8  -> lists very similar, no need to rerun enrichment
+Jaccard 0.5-0.8 -> moderate difference, consider rerunning
+Jaccard < 0.5  -> substantial difference, rerun enrichment
+
+7a vs 5a: OSD498+510 radiation effect 
+  Significant (normalized)  : 6942 
+  Significant (unnormalized): 6868 
+  Overlap                   : 6675 
+  Jaccard similarity        : 0.936 
+  Verdict                   : OK -- no need to rerun enrichment 
+
+7b vs 5b: OSD508+510 genotype x radiation interaction 
+  Significant (normalized)  : 1051 
+  Significant (unnormalized): 975 
+  Overlap                   : 953 
+  Jaccard similarity        : 0.888 
+  Verdict                   : OK -- no need to rerun enrichment 
+
+7c-low vs 5c-low: OSD782 10cGy vs none 
+  Significant (normalized)  : 3489 
+  Significant (unnormalized): 3765 
+  Overlap                   : 3391 
+  Jaccard similarity        : 0.878 
+  Verdict                   : OK -- no need to rerun enrichment 
+
+7c-high vs 5c-high: OSD782 100cGy vs none 
+  Significant (normalized)  : 3313 
+  Significant (unnormalized): 3508 
+  Overlap                   : 3176 
+  Jaccard similarity        : 0.871 
+  Verdict                   : OK -- no need to rerun enrichment 
+
+7d-40 vs 5d-40: OSD658 GCR 40cGy vs none 
+  Significant (normalized)  : 11 
+  Significant (unnormalized): 6 
+  Overlap                   : 6 
+  Jaccard similarity        : 0.545 
+  Verdict                   : CONSIDER rerunning enrichment 
+
+7d-80 vs 5d-80: OSD658 GCR 80cGy vs none 
+  Significant (normalized)  : 19 
+  Significant (unnormalized): 15 
+  Overlap                   : 14 
+  Jaccard similarity        : 0.7 
+  Verdict                   : CONSIDER rerunning enrichment 
+
+=== Comparisons that need pathway enrichment rerun ===
+  C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/unnormalized_results/DEG_unnorm_OSD658_GCR40_vs_none.csv 
+  C:/Users/smith/OneDrive - Florida Institute of Technology/summer 2026/OSDR/OSDR_A-rad-adopsis/unnormalized_results/DEG_unnorm_OSD658_GCR80_vs_none.csv 
+
+Run pathway_enrichment_reusable.R on each of these files.
+
+=== Analysis complete ===
+All output files saved to: C:\Users\smith\OneDrive - Florida Institute of Technology\summer 2026\OSDR\OSDR_A-rad-adopsis\unnormalized_results 
+
+Next steps:
+  1. Run pathway_enrichment_reusable.R on each DEG_unnorm_*.csv
+  2. Run cross_study_comparison.R to compare studies within radiation groups
+  3. Uncomment Section 9 to compare these results to the normalized version
