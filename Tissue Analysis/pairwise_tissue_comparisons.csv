@@ -1,0 +1,11 @@
+Organ1,Organ2,DEG_rate_1,DEG_rate_2,Odds_ratio,P_value,P_adj_bonferroni,Higher_response,Significant
+Leaf_Shoot,Seed_Silique,0.4255,0.2743,1.959,1.23E-30,1.23E-29,Leaf_Shoot > Seed_Silique,YES
+Flower,Leaf_Shoot,0.3156,0.4255,0.623,1.42E-21,1.42E-20,Leaf_Shoot > Flower,YES
+Seed_Silique,Seedling,0.2743,0.507,0.368,1.62E-08,1.62E-07,Seedling > Seed_Silique,YES
+Root,Seed_Silique,0.3615,0.2743,1.497,1.71E-07,1.71E-06,Root > Seed_Silique,YES
+Flower,Seedling,0.3156,0.507,0.448,3.77E-06,3.77E-05,Seedling > Flower,YES
+Leaf_Shoot,Root,0.4255,0.3615,1.308,0.000118164,0.001181643,Leaf_Shoot > Root,YES
+Flower,Seed_Silique,0.3156,0.2743,1.22,0.000792208,0.007922085,Flower > Seed_Silique,YES
+Root,Seedling,0.3615,0.507,0.551,0.000934968,0.009349684,Seedling > Root,YES
+Flower,Root,0.3156,0.3615,0.814,0.003319972,0.03319972,Root > Flower,YES
+Leaf_Shoot,Seedling,0.4255,0.507,0.72,0.057039596,0.570395964,Seedling > Leaf_Shoot,no
