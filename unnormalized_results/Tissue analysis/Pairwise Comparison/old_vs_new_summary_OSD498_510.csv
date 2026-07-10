@@ -1,0 +1,11 @@
+metric,value
+Old DEGs (normalized),6942
+New DEGs (unnormalized),822
+Shared DEGs,787
+Lost DEGs,6155
+Gained DEGs,8
+Direction flips,0
+Lost due to LFC threshold,6141
+Lost due to padj change,14
+baseMean correlation (Spearman),1
+log2FC correlation (shared),0.9525

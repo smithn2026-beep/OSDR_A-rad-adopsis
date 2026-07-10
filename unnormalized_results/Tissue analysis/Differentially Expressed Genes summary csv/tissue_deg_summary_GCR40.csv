@@ -1,0 +1,2 @@
+broad_organ,sub_tissue,total_DEGs,upregulated,downregulated,median_log2FC,mean_log2FC,mean_tau_subtissue
+Leaf_Shoot,hypocotyl,1,0,1,-1.075,-1.075,0.7609

@@ -1,0 +1,11 @@
+comparison,organ_1,organ_2,rate_1,rate_2,odds_ratio,pvalue,padj_bonf,higher
+genotype_interaction,Root,Seedling,2.34,1.88,1.253,0.417213215758114,1,Root
+genotype_interaction,Root,Leaf_Shoot,2.34,1.29,1.843,0.0359720620219126,0.359720620219126,Root
+genotype_interaction,Root,Flower,2.34,3.07,0.758,0.0825308165414453,0.825308165414453,Flower
+genotype_interaction,Root,Seed_Silique,2.34,2.9,0.805,0.199378584715802,1,Seed_Silique
+genotype_interaction,Seedling,Leaf_Shoot,1.88,1.29,1.47,0.31386274637702,1,Seedling
+genotype_interaction,Seedling,Flower,1.88,3.07,0.605,0.0339878933663589,0.339878933663589,Flower
+genotype_interaction,Seedling,Seed_Silique,1.88,2.9,0.642,0.0657272105793834,0.657272105793834,Seed_Silique
+genotype_interaction,Leaf_Shoot,Flower,1.29,3.07,0.411,0.00108135899542541,0.0108135899542541,Flower
+genotype_interaction,Leaf_Shoot,Seed_Silique,1.29,2.9,0.437,0.00271309999960315,0.0271309999960315,Seed_Silique
+genotype_interaction,Flower,Seed_Silique,3.07,2.9,1.062,0.701978343690901,1,Flower
