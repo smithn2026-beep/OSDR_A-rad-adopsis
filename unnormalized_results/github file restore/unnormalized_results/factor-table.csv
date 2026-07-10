@@ -1,0 +1,7 @@
+OSD,genotype,ionizing radiation,absorbed radiation dose,time of sample collection after treatment,growth time
+OSD-498,wild type,"cobalt-60 gamma radiation,non-irradiated","100 gray,not applicable","10 minute,1440 minute,20 minute,90 minute",6 day
+OSD-502,"wild type,myb3r135","cobalt-60 gamma radiation,non-irradiated","100 gray,not applicable",3 hour,6 day
+OSD-508,"wild type,sog1-1","cobalt-60 gamma radiation,non-irradiated","100 gray,not applicable","10 minute,1440 minute,180 minute,20 minute,360 minute,45 minute,720 minute,90 minute,not applicable",
+OSD-510,"wild type,sog1-1","cobalt-60 gamma radiation,non-irradiated","100 gray,not applicable","1440 minute,180 minute,20 minute,360 minute,720 minute,90 minute,not applicable",
+OSD-658,wild type,"mixed radiation,non-irradiated","40 centigray,80 centigray,not applicable",,10 day
+OSD-782,wild type,"cesium-137 gamma radiation,non-irradiated","0 centigray,10 centigray,100 centigray","1 hour,24 hour,3 hour,72 hour",4 week
