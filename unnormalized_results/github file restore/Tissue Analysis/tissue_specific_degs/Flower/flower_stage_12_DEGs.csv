@@ -1,0 +1,3 @@
+"gene_id","baseMean","log2FoldChange","lfcSE","stat","pvalue","padj","deg_flag","regulation","tau_subtissue","tau_broad","specificity","predominant_broad_organ","predominant_subtissue"
+"AT1G23520",6.54499402,1.951410329,0.349660922,5.580864789,2.39e-08,7.12e-07,"yes","up",0.852192239846851,0.719039155045933,"tissue_specific","Flower","flower_stage_12"
+"AT3G03450",89.95461319,-0.310763495,0.121543159,-2.55681601,0.010563507,0.038268566,"yes","down",0.732403079697419,0.760751480494955,"tissue_specific","Flower","flower_stage_12"

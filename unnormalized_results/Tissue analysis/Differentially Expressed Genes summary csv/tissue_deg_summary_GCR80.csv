@@ -1,0 +1,3 @@
+broad_organ,sub_tissue,total_DEGs,upregulated,downregulated,median_log2FC,mean_log2FC,mean_tau_subtissue
+Leaf_Shoot,cotyledon,1,1,0,1.663,1.663,0.955
+Flower,mature_pollen,2,2,0,1.228,1.228,0.8701

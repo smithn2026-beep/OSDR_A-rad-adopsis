@@ -1,0 +1,2 @@
+gene_id,baseMean,log2FoldChange,lfcSE,stat,pvalue,padj,deg_flag,direction,tau_subtissue,tau_broad,predominant_subtissue,predominant_broad_organ,tissue_class
+AT3G09870,2.46468021212429,2.68670758686435,0.676898309734119,3.96914506688556,7.21309609600448e-05,0.000683071845354061,yes,up,0.866627536760933,0.523764510910753,shoot_apex_vegetative_with_leaves,Leaf_Shoot,tissue_specific

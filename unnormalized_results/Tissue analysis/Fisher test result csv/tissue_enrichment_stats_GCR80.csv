@@ -1,0 +1,6 @@
+comparison,broad_organ,organ_DEGs,organ_total,organ_rate,rest_DEGs,rest_total,rest_rate,odds_ratio,ci95_low,ci95_high,pvalue,padj_bonf,enrichment
+GCR80,Root,0,3021,0,4,7049,0.06,0,0,3.535,0.323697381435337,1,ns
+GCR80,Seedling,0,1119,0,4,8951,0.04,0,0,12.126,1,1,ns
+GCR80,Leaf_Shoot,1,1002,0.1,3,9068,0.03,3.018,0.057,37.631,0.342494237460262,1,ns
+GCR80,Flower,3,2529,0.12,1,7541,0.01,8.951,0.718,468.873,0.0513909888768772,0.256954944384386,ns
+GCR80,Seed_Silique,0,2399,0,4,7671,0.05,0,0,4.844,0.578674992815464,1,ns

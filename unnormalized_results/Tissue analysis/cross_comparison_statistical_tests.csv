@@ -1,0 +1,7 @@
+test,statistic,df,pvalue,common_OR,ci95_low,ci95_high,interpretation
+"CMH common OR (Co-60 vs Cs-137, stratified by organ)",173.72,1,1.14060855906213e-39,0.328,0.275,0.39,"Co-60 produces 3.1x more tissue-specific DEGs than Cs-137 (OR=0.328, p=1.14e-39). Significant difference in radiation type response."
+"CMH common OR (Cs-137 10cGy vs 100cGy, stratified by organ)",51.99,1,5.57979336190609e-13,2.846,2.121,3.82,"100cGy produces 2.8x more tissue-specific DEGs than 10cGy (OR=2.846, p=5.58e-13). Significant dose-response."
+Descriptive (GCR 40cGy vs 80cGy - too few DEGs for CMH),,,,,,,"GCR 40cGy: 2 tissue-specific DEGs, GCR 80cGy: 4 - insufficient for statistical test"
+Chi-square (organ distribution: radiation_effect vs genotype_interaction),87.06,4,5.53109470180185e-18,,,,Significant: tissue distribution of DEGs differs between radiation main effect and sog1-1 interaction
+Chi-square (up/down: radiation_effect vs genotype_interaction),456.51,1,2.76683752916486e-101,,,,"Significant: radiation effect is up-dominant, sog1-1 interaction is down-dominant"
+Chi-square (organ distribution across 4 testable comparisons),209.23,12,4.03152121403681e-38,,,,Significant: tissue response profiles differ across radiation conditions

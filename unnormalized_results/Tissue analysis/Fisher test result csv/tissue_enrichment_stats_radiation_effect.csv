@@ -1,0 +1,6 @@
+comparison,broad_organ,organ_DEGs,organ_total,organ_rate,rest_DEGs,rest_total,rest_rate,odds_ratio,ci95_low,ci95_high,pvalue,padj_bonf,enrichment
+radiation_effect,Root,99,3193,3.1,429,7970,5.38,0.562,0.446,0.704,1.15180378930413e-07,5.75901894652064e-07,depleted
+radiation_effect,Seedling,148,1167,12.68,380,9996,3.8,3.674,2.986,4.506,3.09147349005741e-31,1.54573674502871e-30,enriched
+radiation_effect,Leaf_Shoot,88,1083,8.13,440,10080,4.37,1.938,1.509,2.465,3.37332287295065e-07,1.68666143647533e-06,enriched
+radiation_effect,Flower,97,2872,3.38,431,8291,5.2,0.637,0.504,0.8,5.33828650230613e-05,0.000266914325115306,depleted
+radiation_effect,Seed_Silique,96,2848,3.37,432,8315,5.2,0.637,0.503,0.799,5.11425522969744e-05,0.000255712761484872,depleted

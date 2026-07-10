@@ -1,0 +1,110 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	EFO	NCIT	OBI	OSD	CRO	MESH	RBO
+Term Source File	http://data.bioontology.org/ontologies/EFO		http://data.bioontology.org/ontologies/OBI	https://osdr.nasa.gov/			
+Term Source Version	132		29	1.0			
+Term Source Description	Experimental Factor Ontology		Ontology for Biomedical Investigations	User defined terms			
+INVESTIGATION
+Investigation Identifier	
+Investigation Title	
+Investigation Description	
+Investigation Submission Date	
+Investigation Public Release Date	
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Study Identifier	OSD-658
+Study Title	Simulated Galactic Cosmic Ray Exposure Activates Dose-Dependent DNA Repair Response and Downregulates Glucosinolate Pathway in Arabidopsis Seedlings
+Study Description	This study's objective was to develop an understanding of the biological effects of space radiation on plants with the goal of producing fresh food during long duration space missions to support astronauts' nutritional and psychological needs.10-day-old Arabidopsis seedlings were exposed to simulated Galactic Cosmic Rays (GCR) and assessed for transcriptomic changes. The simulated GCR irradiation was carried out in the NASA Space Radiation Laboratory (NSRL) at Brookhaven National Lab (BNL). The exposures were conducted acutely for two dose points at 40 cGy or 80 cGy, with sequential delivery of proton, helium, oxygen, silicon, and iron ions. Control and irradiated seedlings were then harvested and stabilized in RNAlater at 3 hrs. post irradiation. Total RNA was isolated for transcriptomic analyses using RNAseq. The data revealed that the transcriptomic responses were dose-dependent, with significant upregulation of DNA repair pathways and downregulation of glucosinolate biosynthetic pathways. Glucosinolates are important for plant pathogen defense and for the taste of a plant, which are both relevant to growing plants for spaceflight. These findings fill in knowledge gaps of how plants respond to radiation in beyond-Earth environments.
+Study Submission Date	07-Sep-2023
+Study Public Release Date	12-Dec-2023
+Study File Name	s_OSD-658.txt
+Comment[Acknowledgments]	
+Comment[DOI]	10.26030/rxc2-1v61
+Comment[Data Source Accession]	
+Comment[Data Source Link]	
+Comment[Experiment Platform]	
+Comment[Flight Program]	
+Comment[Funding]	Biological and Physical Sciences Division (BPS) and Human Research Program (HRP)
+Comment[Identifiers]	
+Comment[Managing NASA Center]	Kennedy Space Center (KSC)
+Comment[Mission End]	
+Comment[Mission Link]	
+Comment[Mission Name]	
+Comment[Mission Start]	
+Comment[Project Identifier]	High_Dose_Irradiation, Low_Dose_Irradiation, Multiple_Radiation_Types, Heavy_Ion_HZE_Irradiation, Simplified_Galactic_Cosmic_Ray_Simulation_Irradiation
+Comment[Project Link]	
+Comment[Project Title]	
+Comment[Project Type]	Ground Study
+Comment[Space Program]	NASA
+Comment[Study Grant Number]	
+STUDY DESIGN DESCRIPTORS
+Study Design Type	NASA Space Radiation Laboratory
+Study Design Type Term Accession Number	http://purl.obolibrary.org/obo/RBO_00000030
+Study Design Type Term Source REF	RBO
+STUDY PUBLICATIONS
+Study PubMed ID
+Study Publication DOI
+Study Publication Author List
+Study Publication Title
+Study Publication Status
+Study Publication Status Term Accession Number
+Study Publication Status Term Source REF
+STUDY FACTORS
+Study Factor Name	Ionizing Radiation	Absorbed Radiation Dose
+Study Factor Type	ionizing radiation	absorbed radiation dose
+Study Factor Type Term Accession Number	http://purl.obolibrary.org/obo/RBO_00000116	http://purl.obolibrary.org/obo/RBO_00005010
+Study Factor Type Term Source REF	RBO	RBO
+STUDY ASSAYS
+Study Assay File Name	a_OSD-658_transcription-profiling_rna-sequencing-(rna-seq)_illumina.txt
+Study Assay Measurement Type	transcription profiling
+Study Assay Measurement Type Term Accession Number	obo:OBI_0000424
+Study Assay Measurement Type Term Source REF	OBI
+Study Assay Technology Type	RNA Sequencing (RNA-Seq)
+Study Assay Technology Type Term Accession Number	obo:OBI_0001271
+Study Assay Technology Type Term Source REF	OBI
+Study Assay Technology Platform	Illumina
+STUDY PROTOCOLS
+Study Protocol Name	growth protocol	irradiation protocol	sample collection	Nucleic Acid Extraction	Library Construction	Nucleic Acid Sequencing	GeneLab raw data processing protocol	GeneLab RNAseq data processing protocol
+Study Protocol Type	growth protocol	acute	sample collection	Nucleic Acid Extraction	Library Construction	Nucleic Acid Sequencing	data transformation	data transformation
+Study Protocol Type Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0003789	http://purl.obolibrary.org/obo/PATO_0000389					http://purl.obolibrary.org/obo/OBI_0200000	http://purl.obolibrary.org/obo/OBI_0200000
+Study Protocol Type Term Source REF	EFO	RBO	EFO	EFO	EFO	EFO	OBI	OBI
+Study Protocol Description	Preparation of seeds: Sanitized seeds were used for all the experiments. A germination test was conducted after each sanitization procedure to ensure that the seeds were in good and comparable quality across all the experiments. Dry seeds were used for GCR experiments, whereas imbibed (hydrated) seeds were used for SPE experiments. Seeds (as well as non-irradiated control seeds) were exposed to radiation (or comparable control environment) in dark. Seeds were always stored and transported in dark at 4°C before and after the exposure. Early seedling development on petri dishes: Two days after irradiation, control and irradiated seeds were planted onto petri dishes (6-12 seeds per dish depending on the species) containing 0.5x Murishige and Skoog (MS)-based agar media. Growth conditions were set at 22°C, 40-45% RH, 450 ppm CO2, and 150-300 micromoles per square meter per second light (depending on the species) with 16hr/8hr photoperiod. Seedlings were imaged at 6-7 days after planting (DAP) for Arabidopsis for morphological analyses to evaluate signs of stress and deformation. Root length was measured using Rootnav v1.8.1 software. Long-term grow-outs: For SPE exposure, seeds embedded in 0.5% MS-based agar plates were exposed to LDR SPE. Dry seeds were used for simulated GCR exposure. Control and irradiated seeds were then planted in peat plugs for 10 to 16 days. Seedling size and weight were measured. Young plants were then randomly selected and transferred to pots for a total of 28 days grow-out. All plants were maintained under space-vehicle relevant, controlled environment conditions at 3000 ppm CO2, 50% RH, and 23°C, and a 16/8 h photoperiod with 300 micromole per square meter per second light. At the harvest, plant morphometrics and fresh mass were measured.	The Arabidopsis seedlings were sequentially exposed to proton, helium, oxygen, silicon, and iron ions to simulate the GCR spectrum. Exposures were conducted acutely (within minutes for each single ion beam, leading to a total of about 20 mins for all components). Fourteen flasks were subject to either 0 cGy (also referred to as Control; n equals 6 flasks), 40 cGy (n equals 4), or 80 cGy (n equals 4) GCR irradiation. NSRL GCR and SPE simulations are designed to approximate the chronic mixed field exposures in space by means of sequential acute exposures to a variety of ion/energy combinations.  The exposure protocols are on the NSRL website: https://www.bnl.gov/nsrl/userguide/gcrsim.php (GCRSim).  The dose can be administered either in a single series of exposures lasting approximately an hour or in daily fractions over several weeks.  The GCR simulations are described in detail here: Simonsen LC, Slaba TC, Guida P, Rusek A (2020) NASA’s first ground-based Galactic Cosmic Ray Simulator: Enabling a new era in space radiobiology research. PLoS Biol 18(5): e3000669. https://doi.org/10.1371/journal.pbio.3000669. 35% 1000 MeV/n H1 + 39% 250 MeV/n H1 + 18% 250 MeV/n He4+ 6% 350 MeV/n O16 + 1% 600 MeV/n Si + 1% 600 MeV/n Fe56	Three hours after irradiation, immediately after unwrapping the container, seedlings from each flask were harvested and preserved using RNAlater. After 24 hours, preserved samples were transferred to a -80C freezer.	Three hours after irradiation, immediately after unwrapping the container, seedlings from each flask were harvested and preserved using RNAlater. After 24 hours, preserved samples were transferred to a -80°C freezer. RNA extracts from whole seedlings were isolated from each preserved sample using a homogenizer and the Plant RNeasy Mini Kit (Qiagen), following manufacture’s recommended procedures including the on-column DNase treatment. RNA extraction and transcriptomic analysis was performed at Case Western Reserve University's Applied Functional Genomics Core.	Libraries were prepared from purified RNA (0.3 μg) using the TruSeq Stranded Total RNA Library Prep with Ribo-Zero Globin (Illumina, 20020613) according to the manufacturer’s protocol.	Three runs of 75 bp paired-end sequencing was performed on the pooled libraries using the Illumina NextSeq 550 System. Quality control of purified RNA and RNA libraries was carried out using the Fragment Analyzer System (Agilent).	Fastq format was checked with fastq_utils v0.25.1. Quality assessment of reads was performed with FastQC v0.11.9 and reports were combined with MultiQC v1.12. rRNA percentages of reads were estimated with the 'hts_SeqScreener' program of htstream v1.3.3 screened against a fasta file of A-thaliana rRNA sequences retrieved from NCBI on 01-Sep-2021.	Data were processed as described in GL-DPPD-7101-F (https://github.com/nasa/GeneLab_Data_Processing/blob/master/RNAseq/Pipeline_GL-DPPD-7101_Versions/GL-DPPD-7101-F.md), using NF_RCP-F version 1.0.4 (https://github.com/nasa/GeneLab_Data_Processing/tree/NF_RCP-F_1.0.4/RNAseq/Workflow_Documentation/NF_RCP-F). In short, raw fastq files were filtered using Trim Galore! (version 0.6.7) powered by Cutadapt (version 3.7). Trimmed fastq file quality was evaluated with FastQC (version 0.11.9), and MultiQC (version 1.12) was used to generate MultiQC reports. Arabidopsis thaliana STAR and RSEM references were built using STAR (version 2.7.10a) and RSEM (version 1.3.1), respectively, Ensembl Plants release 54, genome version TAIR10 (Arabidopsis_thaliana.TAIR10.dna.toplevel.fa) and the following gtf annotation file: Arabidopsis_thaliana.TAIR10.54.gtf. Trimmed reads were aligned to the Arabidopsis thaliana STAR reference with STAR (version 2.7.10a) and alignment log files were compiled with MultiQC (version 1.12). Aligned reads were assessed for strandedness using RSeQC infer_experiment.py (version 4.0.0), gene body coverage using RSeQC geneBody_coverage.py (version 4.0.0), inner distance was assessed using RSeQC inner_distance.py (version 4.0.0), and distribution of RNA features using RSeQC read_distribution.py (version 4.0.0). Aligned reads from all samples were quantified using RSEM (version 1.3.1), with strandedness set to reverse and RSEM count log files were compiled with MultiQC (version 1.12). The runsheet was generated with dp_tools (version 1.3.4) and the runsheet and quantification data were imported to R (version 4.1.3) with tximport (version 1.27.1) and normalized with DESeq2 (version 1.34.0) median of ratios method. Normalized gene counts were subject to differential expression analysis. Differential expression analysis was performed in R (version 4.1.3) using DESeq2 (version 1.34.0); all groups were compared pairwise using the Wald test and the likelihood ratio test was used to generate the F statistic p-value. Gene annotations were assigned using the custom annotation tables generated in-house as detailed in GL-DPPD-7110 (https://github.com/nasa/GeneLab_Data_Processing/blob/GL_RefAnnotTable_1.0.0/GeneLab_Reference_Annotations/Pipeline_GL-DPPD-7110_Versions/GL-DPPD-7110/GL-DPPD-7110.md), with STRINGdb (version 2.8.4), PANTHER.db (version 1.0.11), and org.At.tair.db (version 3.15.0).
+Study Protocol URI								
+Study Protocol Version								
+Study Protocol Parameters Name	Growth Medium;light cycle;Mean Growth Temperature;Light Intensity;Growth Time	number of particle types;ionizing radiation categorized by source;absorbed radiation dose rate;time between exposures;ionizing radiation energy (in order of administration);exposure duration;particle charge;linear energy transfer;ionizing radiation device	Sample Preservation Method;Sample Storage Temperature		Library Selection;Library Layout;Stranded	Sequencing Instrument;Read Length	rRNA Contamination;Read Depth;MultiQC File Name	trimmed sequence data;Trimmed Sequence Data/Multiqc Reports;Trimmed Sequence Data/Trimming Reports;aligned sequence data;Aligned Sequence Data/Alignment Logs;Aligned Sequence Data/MultiQC Reports;RSeQC/MultiQC Reports;Raw Counts Data;Raw Counts Data/Multiqc Reports;Raw Counts Tables;Normalized Counts Data;differential expression analysis data
+Study Protocol Parameters Name Term Accession Number	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl;http://purl.obolibrary.org/obo/NCIT_C90419;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/	https://osdr.nasa.gov/;http://purl.obolibrary.org/obo/RBO_00000001;http://purl.obolibrary.org/obo/RBO_00005011;https://osdr.nasa.gov/;https://osdr.nasa.gov/;http://purl.obolibrary.org/obo/NCIT_C83280;http://purl.obolibrary.org/obo/RBO_00005040;http://purl.obolibrary.org/obo/RBO_010013;http://purl.obolibrary.org/obo/RBO_00005070	https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/		;;	;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl	https://osdr.nasa.gov/;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl;https://osdr.nasa.gov/	http://purl.obolibrary.org/obo/OBI_0002569;https://osdr.nasa.gov/;https://osdr.nasa.gov/;http://purl.obolibrary.org/obo/OBI_0002580;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;http://purl.obolibrary.org/obo/OBI_0002584
+Study Protocol Parameters Name Term Source REF	NCIT;NCIT;OSD;OSD;OSD	OSD;RBO;RBO;OSD;OSD;NCIT;RBO;RBO;RBO	;		;;	;NCIT	OSD;NCIT;OSD	OBI;OSD;OSD;OBI;OSD;OSD;OSD;OSD;OSD;OSD;OSD;OBI
+Study Protocol Components Name								
+Study Protocol Components Type								
+Study Protocol Components Type Term Accession Number								
+Study Protocol Components Type Term Source REF								
+STUDY CONTACTS
+Study Person Last Name	Dixit	Zhang
+Study Person First Name	Anirudha	Ye
+Study Person Mid Initials		
+Study Person Email	anirudha.dixit@nasa.gov	ye.zhang-1@nasa.gov
+Study Person Phone		
+Study Person Fax		
+Study Person Address	Kennedy Space Center, Florida	Kennedy Space Center, Florida
+Study Person Affiliation		NASA
+Study Person Roles	scientist	investigation role
+Study Person Roles Term Accession Number	https://osdr.nasa.gov/	http://purl.org/credit/ontology
+Study Person Roles Term Source REF	OSD	CRO

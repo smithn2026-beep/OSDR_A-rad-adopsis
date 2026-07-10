@@ -1,0 +1,6 @@
+comparison,broad_organ,organ_DEGs,organ_total,organ_rate,rest_DEGs,rest_total,rest_rate,odds_ratio,ci95_low,ci95_high,pvalue,padj_bonf,enrichment
+genotype_interaction,Root,75,3200,2.34,211,8127,2.6,0.9,0.68,1.181,0.464861418346894,1,ns
+genotype_interaction,Seedling,22,1171,1.88,264,10156,2.6,0.717,0.44,1.115,0.167386212647369,0.836931063236843,ns
+genotype_interaction,Leaf_Shoot,14,1089,1.29,272,10238,2.66,0.477,0.256,0.818,0.00425422950299625,0.0212711475149812,depleted
+genotype_interaction,Flower,90,2932,3.07,196,8395,2.33,1.325,1.017,1.715,0.0338052228990342,0.169026114495171,enriched
+genotype_interaction,Seed_Silique,85,2935,2.9,201,8392,2.4,1.215,0.928,1.58,0.150907536495016,0.754537682475079,ns
