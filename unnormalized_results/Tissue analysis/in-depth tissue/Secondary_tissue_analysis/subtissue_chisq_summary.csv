@@ -1,0 +1,5 @@
+comparison,n_subtissues,chi_square,df,p_value
+radiation_effect,58,546.09,28,2.07163735023395e-97
+Cs137_100cGy,58,162.43,28,6.83350746763978e-21
+Cs137_10cGy,58,145.27,28,8.70735904456227e-18
+genotype_interaction,58,51.48,28,0.00440371616883647

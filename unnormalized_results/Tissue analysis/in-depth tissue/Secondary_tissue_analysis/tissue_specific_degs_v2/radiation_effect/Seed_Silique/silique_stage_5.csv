@@ -1,0 +1,2 @@
+gene_id,baseMean,log2FoldChange,lfcSE,stat,pvalue,padj,deg_flag,direction,tau_subtissue,tau_broad,predominant_subtissue,predominant_broad_organ,tissue_class
+AT4G17660,2.84977510369591,2.8488643414098,0.527746927643277,5.39816376408248,6.73264004908627e-08,1.85124957941636e-06,yes,up,0.872603360841198,0.81311977442353,silique_stage_5,Seed_Silique,tissue_specific

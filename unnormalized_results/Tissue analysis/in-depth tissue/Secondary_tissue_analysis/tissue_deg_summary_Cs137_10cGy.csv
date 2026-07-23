@@ -1,0 +1,12 @@
+broad_organ,sub_tissue,total_DEGs,upregulated,downregulated,median_log2FC,mean_log2FC,mean_tau_subtissue
+Root,root,12,11,1,1.346,1.289,0.8635
+Seedling,seedling_green_parts,7,7,0,1.381,1.446,0.8728
+Leaf_Shoot,rosette_leaf,1,1,0,1.157,1.157,0.6215
+Leaf_Shoot,rosette_vegetative,1,1,0,1.148,1.148,0.97
+Flower,mature_pollen,1,1,0,1.001,1.001,0.9799
+Flower,stamen,1,1,0,1.177,1.177,0.9736
+Seed_Silique,seed_stage_10,3,3,0,1.203,1.197,0.8736
+Seed_Silique,seed_stage_6,1,1,0,1.288,1.288,0.7036
+Seed_Silique,seed_stage_7,1,1,0,1.625,1.625,0.6025
+Seed_Silique,seed_stage_8,1,1,0,2.201,2.201,0.9199
+Seed_Silique,seed_stage_9,3,3,0,1.457,1.404,0.7789

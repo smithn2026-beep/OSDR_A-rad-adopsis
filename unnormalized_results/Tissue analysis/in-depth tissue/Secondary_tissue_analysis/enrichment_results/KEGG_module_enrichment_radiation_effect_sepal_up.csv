@@ -1,0 +1,2 @@
+"ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"M00039","Monolignol biosynthesis, phenylalanine/tyrosine => monolignol","1/1","38/1011",0.0263157894736842,26.6052631578947,5.06016434099672,0.0375865479723044,0.0375865479723044,NA,"AT4G37990",1

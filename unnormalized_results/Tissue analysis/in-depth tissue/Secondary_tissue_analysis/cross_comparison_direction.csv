@@ -1,0 +1,6 @@
+broad_organ,Cs137_100cGy,Cs137_10cGy,GCR40,GCR80,genotype_interaction,radiation_effect
+Flower,0.41,0.06,0.03,0.09,2.65,2.85
+Leaf_Shoot,0.61,0.18,0.09,0.09,1.23,7.71
+Root,2.12,0.8,0,0,2.3,3.04
+Seed_Silique,1.23,0.32,0,0,2.28,2.57
+Seedling,2.83,1.54,0,0,1.78,11.96

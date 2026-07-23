@@ -1,0 +1,2 @@
+"category","subcategory","ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"Metabolism","Metabolism of terpenoids and polyketides","ath00904","Diterpenoid biosynthesis - Arabidopsis thaliana (thale cress)","1/3","19/4980",0.0526315789473684,87.3684210526316,9.25965993204197,0.011404451626104,0.0342133548783121,0.0240093718444296,"AT1G02400",1

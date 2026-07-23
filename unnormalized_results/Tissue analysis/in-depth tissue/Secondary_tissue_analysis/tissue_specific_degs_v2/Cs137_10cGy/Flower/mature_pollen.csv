@@ -1,0 +1,2 @@
+gene_id,baseMean,log2FoldChange,lfcSE,stat,pvalue,padj,deg_flag,direction,tau_subtissue,tau_broad,predominant_subtissue,predominant_broad_organ,tissue_class
+AT5G55930,340.221339356498,1.00107543145152,0.209766623593929,4.77232943115595,1.82107316549262e-06,0.000145153768474168,yes,up,0.979862082190671,0.883656181241729,mature_pollen,Flower,tissue_specific

@@ -1,0 +1,7 @@
+comparison,total_genes,DEGs,upregulated,downregulated,pct_DEG,nuclear_genes,organellar_genes,log2FC_min,log2FC_max,padj_min,padj_max
+radiation_effect,25519,822,764,58,3.22,25307,212,-3.865,8.133,1.78e-37,1e+00
+genotype_interaction,26072,433,76,357,1.66,25843,229,-9.536,22.472,2.02e-36,1e+00
+GCR40,22178,2,1,1,0.01,21976,202,-4.224,5.995,1.02e-15,1e+00
+GCR80,22178,11,11,0,0.05,21976,202,-4.398,5.626,1.87e-36,1e+00
+Cs137_100cGy,23667,229,220,9,0.97,23508,159,-3.992,16.092,4.65e-11,1e+00
+Cs137_10cGy,23667,87,79,8,0.37,23508,159,-25.992,15.924,1.76e-20,1e+00

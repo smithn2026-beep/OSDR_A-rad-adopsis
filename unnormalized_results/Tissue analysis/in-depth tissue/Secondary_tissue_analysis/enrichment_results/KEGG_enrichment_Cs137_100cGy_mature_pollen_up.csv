@@ -1,0 +1,4 @@
+"category","subcategory","ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"Metabolism","Carbohydrate metabolism","ath00053","Ascorbate and aldarate metabolism - Arabidopsis thaliana (thale cress)","1/1","53/4980",0.0188679245283019,93.9622641509434,9.64169404985158,0.0106425702811246,0.0186746987951806,NA,"AT2G19800",1
+"Metabolism","Carbohydrate metabolism","ath00562","Inositol phosphate metabolism - Arabidopsis thaliana (thale cress)","1/1","73/4980",0.0136986301369863,68.2191780821918,8.19873027256,0.0146586345381524,0.0186746987951806,NA,"AT2G19800",1
+"Metabolism","Global and overview maps","ath01250","Biosynthesis of nucleotide sugars - Arabidopsis thaliana (thale cress)","1/1","93/4980",0.010752688172043,53.5483870967742,7.24902663098807,0.0186746987951806,0.0186746987951806,NA,"AT2G19800",1

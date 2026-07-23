@@ -1,0 +1,2 @@
+"category","subcategory","ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"Metabolism","Carbohydrate metabolism","ath00520","Amino sugar and nucleotide sugar metabolism - Arabidopsis thaliana (thale cress)","1/1","103/4772",0.00970873786407767,46.3300970873786,6.73276296087859,0.0215842414082146,0.0215842414082146,NA,"AT2G43620",1
